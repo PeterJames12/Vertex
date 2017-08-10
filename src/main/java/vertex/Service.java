@@ -15,6 +15,10 @@ public class Service {
         return database.getMas()[0];
     }
 
+    public String getLast() {
+        return database.getMas()[database.getMas().length - 1];
+    }
+
     public String[] getByName(String name) {
         String[] mas = database.getMas();
         int count = 0;
