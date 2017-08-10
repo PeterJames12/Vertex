@@ -14,8 +14,18 @@ public class Service {
     public String getFirst() {
         return database.getMas()[0];
     }
+    public String getFlamaster() {
+        return database.getMas()[0];
+    }
+
+
+
 
     public String getLast() {
+        return database.getMas()[database.getMas().length - 1];
+    }
+
+    public String getLamaster() {
         return database.getMas()[database.getMas().length - 1];
     }
 
