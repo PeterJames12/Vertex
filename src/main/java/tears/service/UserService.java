@@ -7,6 +7,7 @@ import tears.model.User;
  */
 public interface UserService {
 
+
     /**
      * @return user.
      */
