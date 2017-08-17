@@ -5,7 +5,7 @@ import tears.model.User;
 import tears.service.UserService;
 
 /**
- * Implementation
+ * Implementation of {@link UserService} interface.
  *
  * @author Igor Hnes on 8/17/17.
  */

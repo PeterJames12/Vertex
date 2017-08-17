@@ -5,6 +5,8 @@ import tears.database.UserData;
 import tears.model.User;
 
 /**
+ * Implementation of {@link UserDao} interface.
+ *
  * @author Igor Hnes on 8/17/17.
  */
 public class UserDaoImpl implements UserDao {

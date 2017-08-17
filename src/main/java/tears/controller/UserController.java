@@ -4,6 +4,8 @@ import tears.service.UserService;
 import tears.service.impl.UserServiceImpl;
 
 /**
+ * User controller.
+ *
  * @author Igor Hnes on 8/17/17.
  */
 public class UserController {

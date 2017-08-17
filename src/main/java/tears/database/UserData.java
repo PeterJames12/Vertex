@@ -3,6 +3,8 @@ package tears.database;
 import tears.model.User;
 
 /**
+ * Imitation database for {@link User} entity.
+ *
  * @author Igor Hnes on 8/17/17.
  */
 public class UserData {
