@@ -12,7 +12,6 @@ public class UserController {
 
         UserService userService =   new UserServiceImpl();
 
-
         userService.getUsers();
 
     }
