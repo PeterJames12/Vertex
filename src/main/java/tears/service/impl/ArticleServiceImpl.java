@@ -27,6 +27,6 @@ public class ArticleServiceImpl implements ArticleService{
      */
     @Override
     public Article getByTitlePart(String partTitle) {
-        return articleDao.getByTitlePart("Some");
+        return articleDao.getByTitlePart(partTitle);
     }
 }
