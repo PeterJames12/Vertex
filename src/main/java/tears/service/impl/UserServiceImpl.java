@@ -29,7 +29,6 @@ public class UserServiceImpl implements UserService {
         return userDao.getUsers();
     }
 
-
     /**
      * {@inheritDoc}.
      */
