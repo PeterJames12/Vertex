@@ -1,9 +1,8 @@
-package tears.service;
+package tears.dao;
 
 import tears.model.Article;
 
-public interface ArticleService {
-
+public interface ArticleDao {
     /**
      * @return article.
      */
@@ -19,5 +18,4 @@ public interface ArticleService {
      * @return {@link Article} entity  by part of the text
      */
     Article getByTitlePart(String partTitle);
-
 }
