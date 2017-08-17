@@ -18,7 +18,7 @@ public interface ArticlesDao {
     Articles [] getArticless();
 
     /**
-     * @param id is user's id.
+     * @param id is articles's id.
      * @return {@link Articles} entity by given id.
      */
 
