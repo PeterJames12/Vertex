@@ -16,7 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Vertex" target="1.5" />
+      <module name="Vertex" target="1.6" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
