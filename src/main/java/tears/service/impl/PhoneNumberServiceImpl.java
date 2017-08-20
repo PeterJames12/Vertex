@@ -11,21 +11,26 @@ import tears.service.PhoneNumberService;
 
 public class PhoneNumberServiceImpl implements PhoneNumberService {
 
+    PhoneNumberDao phoneNumberDao=new PhoneNumberDaoImpl();
 
     @Override
-    public void addPhoneNumber(int number) {  // Этот метод реализовует PhoneNumberDaoImpl
-        PhoneNumberDao phoneNumberDao=new PhoneNumberDaoImpl();
-        phoneNumberDao.addPhoneNumber(number);  //По сути этот метод можно вызвать, но его реализация
-                                                // все равно через PhoneNumberDaoImpl
-    }
-
-    @Override
-    public int getNumberById(int id) {
+    public int getNumberById(int id) {         // Получить номер по Id
       return PhoneNumberData.getNumberById(id);
     }
 
     @Override
     public PhoneNumber[] getAllDataBaseOfPhones() {
         return PhoneNumberData.getAllData();
+    }
+
+    @Override
+    public void addPhoneNumber(int number) {  // Этот и следующий метод реализовует класс PhoneNumberDaoImpl
+        phoneNumberDao.addPhoneNumber(number);  //По сути эти методы можно вызвать, но ихняя реализация
+                                               // все равно через PhoneNumberDaoImpl
+    }
+
+    @Override
+    public void deleteNumber(int id) {
+        phoneNumberDao.deleteNumber(id);
     }
 }
