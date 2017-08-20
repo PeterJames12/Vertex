@@ -8,6 +8,15 @@ public class User {
     private String name;
     private String surname;
     private int age;
+    private String Email;
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
 
     public String getName() {
         return name;

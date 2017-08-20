@@ -22,4 +22,6 @@ public interface UserService {
      * @return {@link User} entity by given id.
      */
     User getById(Long id);
+
+    EmailService getEmail();
 }

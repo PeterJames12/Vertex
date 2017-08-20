@@ -2,6 +2,7 @@ package tears.service.impl;
 
 import tears.dao.UserDao;
 import tears.model.User;
+import tears.service.EmailService;
 import tears.service.UserService;
 
 /**
@@ -11,7 +12,7 @@ import tears.service.UserService;
  */
 public class UserServiceImpl implements UserService {
 
-    private UserDao userDao;
+   private  UserDao userDao;
 
     /**
      * {@inheritDoc}.
@@ -36,5 +37,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getById(Long id) {
         return userDao.getById(id);
+    }
+
+    @Override
+    public EmailService getEmail() {
+        return null;
     }
 }
