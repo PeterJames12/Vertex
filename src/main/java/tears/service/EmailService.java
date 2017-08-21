@@ -1,28 +1,12 @@
 package tears.service;
 
-
-import tears.model.User;
-
 /**
  * Created by AlexB on 20.08.2017.
  */
 public interface EmailService {
 
     /**
-     * @return email adress.
+     * Send message to given email.
      */
-    User getName();
-
-    /**
-     * @return email adress.
-     */
-    User getEmail();
-
-    /**
-     * @return email.
-     */
-    User getPassword();
-
-    String sendMessage();
-
+    void sendMessage(String message, String email);
 }

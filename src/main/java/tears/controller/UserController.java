@@ -13,5 +13,8 @@ public class UserController {
         UserService userService = new UserServiceImpl();
         userService.getUsers();
 
+
+
+        userService.changePassword("!qwert","user@user.com.ua");
     }
 }

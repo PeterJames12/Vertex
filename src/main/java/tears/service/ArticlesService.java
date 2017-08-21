@@ -17,8 +17,6 @@ public interface ArticlesService {
      */
     Articles[] getDesk();
 
-
-
     /**
      * @param id is article's id.
      * @return {@link Articles} entity by given id.
