@@ -30,10 +30,6 @@ public class UserServiceImpl implements UserService {
         return userDao.getUsers();
     }
 
-
-    /**
-     * {@inheritDoc}.
-     */
     @Override
     public User getById(Long id) {
         return userDao.getById(id);

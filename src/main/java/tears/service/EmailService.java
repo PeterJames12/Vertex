@@ -19,7 +19,7 @@ public interface EmailService {
     User getEmail();
 
     /**
-     * @return email adress.
+     * @return email.
      */
     User getPassword();
 
