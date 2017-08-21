@@ -2,7 +2,6 @@ package tears.service.impl;
 
 import tears.dao.UserDao;
 import tears.model.User;
-import tears.service.EmailService;
 import tears.service.UserService;
 
 /**
@@ -41,10 +40,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public EmailServiceImpl changePassword() {
-        EmailServiceImpl emailServiceImpl = new EmailServiceImpl();
-        emailServiceImpl.sendMessage();
-        return emailServiceImpl;
+    public String changePassword() {
+        emailServiceImpl = new EmailServiceImpl();
+        String message = emailServiceImpl.sendMessage();
+        return message;
+
     }
 
 

@@ -1,0 +1,28 @@
+package tears.service;
+
+
+import tears.model.User;
+
+/**
+ * Created by qw-user on 20.08.2017.
+ */
+public interface EmailService {
+
+    /**
+     * @return email adress.
+     */
+    User getName();
+
+    /**
+     * @return email adress.
+     */
+    User getEmail();
+
+    /**
+     * @return email adress.
+     */
+    User getPassword();
+
+    String sendMessage();
+
+}

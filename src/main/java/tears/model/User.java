@@ -8,15 +8,15 @@ public class User {
     private String name;
     private String surname;
     private int age;
-    private String Email;
+    private String email;
     private String password;
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        email = email;
     }
 
     public String getPassword() {
