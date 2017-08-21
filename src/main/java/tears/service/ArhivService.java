@@ -18,8 +18,6 @@ public interface ArhivService {
      */
    Arhiv[] getTime();
 
-
-
     /**
      * @param id is arhiv's id.
      * @return {@link Arhiv} entity by given id.

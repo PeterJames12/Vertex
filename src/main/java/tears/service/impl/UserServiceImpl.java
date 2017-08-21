@@ -35,13 +35,11 @@ public class UserServiceImpl implements UserService {
         return userDao.getById(id);
     }
 
+    /**
+     * {@inheritDoc}.
+     */
     @Override
-    public String changePassword() {
-        emailServiceImpl = new EmailServiceImpl();
-        String message = emailServiceImpl.sendMessage();
-        return message;
-
+    public void changePassword(String message, String email) {
+        emailServiceImpl.sendMessage(message, email);
     }
-
-
 }
