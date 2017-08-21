@@ -6,7 +6,6 @@ import tears.model.User;
  * @author Igor Hnes on 8/17/17.
  */
 public interface UserService {
-
     /**
      * @return user.
      */
@@ -23,5 +22,5 @@ public interface UserService {
      */
     User getById(Long id);
 
-    EmailService getEmail();
+    EmailService changePassword();
 }

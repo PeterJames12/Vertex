@@ -16,4 +16,14 @@ public class UserData {
 
         return users;
     }
+
+    public static User getPassword() {
+        final User user= new User();
+        user.setName("Bob");
+        user.setPassword("1111");
+        user.setEmail("bob@gmail.com");
+
+
+        return user;
+    }
 }

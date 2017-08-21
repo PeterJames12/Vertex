@@ -17,6 +17,8 @@ public interface UserDao {
      */
     User[] getUsers();
 
+    User changePassword();
+
     /**
      * @param id is user's id.
      * @return {@link User} entity by given id.

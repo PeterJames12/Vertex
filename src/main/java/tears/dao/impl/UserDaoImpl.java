@@ -25,6 +25,11 @@ public class UserDaoImpl implements UserDao {
         return UserData.getUsers();
     }
 
+    @Override
+    public User changePassword() {
+        return UserData.getPassword();
+    }
+
     /**
      * {@inheritDoc}.
      */
