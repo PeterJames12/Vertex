@@ -37,4 +37,19 @@ public class UserServiceImpl implements UserService {
     public User getById(Long id) {
         return userDao.getById(id);
     }
+
+    @Override
+    public void sendEmail(Long id) {
+        UserSendEmailService.sendEmail(id);
+    }
+
+    @Override
+    public void acceptanceOfFeedback(Long id) {
+        UserAcceptanceOfFeedback.acceptanceOfFeedback(id);
+    }
+
+    @Override
+    public String orderingGood(Long id, int order) {
+        return UserOrderingGoods.orderingGood(id,order);
+    }
 }

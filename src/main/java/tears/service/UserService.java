@@ -23,4 +23,21 @@ public interface UserService {
      * @return {@link User} entity by given id.
      */
     User getById(Long id);
+
+
+/*
+* notify that email was send to {@link User} entity by given id.
+*/
+    void sendEmail(Long id);
+
+    /*
+* notify that feedback was accepted from user: {@link User}
+*/
+    void acceptanceOfFeedback(Long id);
+
+    /**
+     * @return order.
+     */
+
+     String orderingGood(Long id,int order);
 }

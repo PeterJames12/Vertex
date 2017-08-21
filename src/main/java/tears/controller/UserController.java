@@ -11,7 +11,9 @@ public class UserController {
     public static void main(String[] args) {
 
         UserService userService = new UserServiceImpl();
-        userService.getUsers();
-
+       // userService.getUsers();
+        userService.sendEmail((long) 2);
+        userService.acceptanceOfFeedback((long) 1);
+        userService.orderingGood((long) 2,1);
     }
 }
