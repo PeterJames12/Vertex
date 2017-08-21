@@ -13,7 +13,7 @@ import tears.service.UserService;
 public class UserServiceImpl implements UserService {
 
     private UserDao userDao;
-    private EmailService emailService;
+    private EmailServiceImpl emailServiceImpl;
 
     /**
      * {@inheritDoc}.
@@ -41,10 +41,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public EmailService changePassword() {
+    public EmailServiceImpl changePassword() {
         EmailServiceImpl emailServiceImpl = new EmailServiceImpl();
-        emailService.sendMessage();
-        return emailService;
+        emailServiceImpl.sendMessage();
+        return emailServiceImpl;
     }
 
 
