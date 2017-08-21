@@ -4,7 +4,7 @@ package tears.service;
 import tears.model.User;
 
 /**
- * Created by Alex on 20.08.2017.
+ * Created by AlexB on 20.08.2017.
  */
 public interface EmailService {
 
