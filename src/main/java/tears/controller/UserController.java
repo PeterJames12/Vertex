@@ -1,8 +1,5 @@
 package tears.controller;
 
-import tears.service.UserService;
-import tears.service.impl.UserServiceImpl;
-
 /**
  * User controller.
  *
@@ -12,9 +9,7 @@ public class UserController {
 
     public static void main(String[] args) {
 
-        UserService userService = new UserServiceImpl();
 
-        userService.getUsers();
 
     }
 }
