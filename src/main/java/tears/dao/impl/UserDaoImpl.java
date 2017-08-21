@@ -4,6 +4,8 @@ import tears.dao.UserDao;
 import tears.database.UserData;
 import tears.model.User;
 
+import java.util.List;
+
 /**
  * Implementation of {@link UserDao} interface.
  *
@@ -15,7 +17,14 @@ public class UserDaoImpl implements UserDao {
      * {@inheritDoc}.
      */
     @Override
-    public User getUser() {
+    public User getUserByEmail(String email) {
+        final List<User> users = UserData.getUsers();
+
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return user;
+            }
+        }
         return null;
     }
 
@@ -24,16 +33,19 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public User[] getUsers() {
-        return UserData.getUsers();
+        return null;
     }
 
     /**
      * {@inheritDoc}.
      */
     @Override
-    public User getById(Long id) {
-        final User user = new User();
-        user.setName("Alex");
-        return user;
+    public User getUserById(Long id) {
+        return null;
+    }
+
+    @Override
+    public User update(User user) {
+        return null;
     }
 }

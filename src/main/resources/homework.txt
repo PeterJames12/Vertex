@@ -1,1 +1,8 @@
-Random user
+model - (Project, Instructor)
+database - ProjectData
+dao - ProjectDao
+    impl - ProjectDaoImpl
+service - ProjectService
+    impl - ProjectServiceImpl
+    email - EmailService
+controller - ProjectController

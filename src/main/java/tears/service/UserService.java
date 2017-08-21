@@ -10,7 +10,7 @@ public interface UserService {
     /**
      * @return user.
      */
-    User getUser();
+    User getUserByEmail(String email);
 
     /**
      * @return list of users.
@@ -22,4 +22,9 @@ public interface UserService {
      * @return {@link User} entity by given id.
      */
     User getById(Long id);
+
+    /**
+     * Change password.
+     */
+    void changePassword(User user);
 }

@@ -10,7 +10,7 @@ public interface UserDao {
     /**
      * @return user.
      */
-    User getUser();
+    User getUserByEmail(String email);
 
     /**
      * @return list of users.
@@ -21,5 +21,7 @@ public interface UserDao {
      * @param id is user's id.
      * @return {@link User} entity by given id.
      */
-    User getById(Long id);
+    User getUserById(Long id);
+
+    User update(User user);
 }
