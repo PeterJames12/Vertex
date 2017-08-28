@@ -1,6 +1,7 @@
 package LiloProject.service.impl;
 
 import LiloProject.dao.InstructorDao;
+import LiloProject.database.InstructorData;
 import LiloProject.email.EmailService;
 import LiloProject.model.Instructor;
 import LiloProject.service.InstructorService;
@@ -41,12 +42,11 @@ public class InstructorServiceImpl implements InstructorService {
     }
 
     @Override
-    public void setCall(String phoneNumber) {
-        Instructor instructor = instructorDao.getPhoneNumberByName("122325");
-        instructor.getPhoneNumber();
-        phoneService.makecall(phoneNumber);
+    public void setCall(String name) {
 
+        Instructor instructor = new Instructor();
+        instructor.getPhoneNumber().equals(name);
+        phoneService.makecall("Alex");
     }
-
 
 }

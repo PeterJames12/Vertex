@@ -7,6 +7,6 @@ import LiloProject.model.Instructor;
  */
 public interface PhoneService {
 
-    void makecall(String phoneNumber);
+    void makecall(String name);
 
 }

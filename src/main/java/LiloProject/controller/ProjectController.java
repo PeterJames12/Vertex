@@ -1,7 +1,5 @@
 package LiloProject.controller;
 
-import LiloProject.dao.InstructorDao;
-import LiloProject.model.Instructor;
 import LiloProject.service.InstructorService;
 import LiloProject.service.impl.InstructorServiceImpl;
 
@@ -13,7 +11,7 @@ public class ProjectController {
     public static void main(String[] args) {
 
         InstructorService instructorService = new InstructorServiceImpl();
-        instructorService.setCall("0554667577");
+        instructorService.setCall("Alex");
 
     }
 }

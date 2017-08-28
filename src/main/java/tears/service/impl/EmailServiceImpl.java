@@ -1,6 +1,7 @@
 package tears.service.impl;
 
 
+
 import tears.service.EmailService;
 
 /**
@@ -13,6 +14,6 @@ public class EmailServiceImpl implements EmailService {
      */
     @Override
     public void sendMessage(String message, String email) {
-        // send message.
+        System.out.println(message);
     }
 }

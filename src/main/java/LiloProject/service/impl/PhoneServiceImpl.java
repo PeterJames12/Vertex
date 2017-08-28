@@ -1,5 +1,6 @@
 package LiloProject.service.impl;
 
+import LiloProject.dao.InstructorDao;
 import LiloProject.model.Instructor;
 import LiloProject.service.PhoneService;
 
@@ -8,12 +9,14 @@ import LiloProject.service.PhoneService;
  */
 public class PhoneServiceImpl implements PhoneService {
 
-    Instructor instructor;
+
+
 
     @Override
     public void makecall(String phoneNumber) {
-        instructor.getPhoneNumber();
-        System.out.println("CALLING" + " " + phoneNumber);
-    }
 
+
+        System.out.println("CALLING" + phoneNumber);
+
+    }
 }

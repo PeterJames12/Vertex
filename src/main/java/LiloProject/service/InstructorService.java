@@ -25,6 +25,6 @@ public interface InstructorService {
 
     void welcomeMessage(Instructor instructor);
 
-    void setCall(String phoneNumber);
+    void setCall(String name);
 
 }

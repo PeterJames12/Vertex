@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public User[] getUsers() {
-        return userDao.getUsers();
+        return null;
     }
 
     @Override
@@ -40,6 +40,7 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public void changePassword(String message, String email) {
+        emailServiceImpl = new EmailServiceImpl();
         emailServiceImpl.sendMessage(message, email);
     }
 }

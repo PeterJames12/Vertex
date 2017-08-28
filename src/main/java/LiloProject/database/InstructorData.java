@@ -17,6 +17,7 @@ public class InstructorData {
             instructor.setName("Alex");
             instructor.setSurname("Smit");
             instructor.setPhoneNumber("0934698900");
+            instructor.setEmail("lovely_story@ukr.com");
 
             List<Instructor> instructorList = new ArrayList<>();
             instructorList.add(instructor);
