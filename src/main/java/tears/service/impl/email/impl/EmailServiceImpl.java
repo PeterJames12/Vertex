@@ -1,11 +1,11 @@
-package tears.email.impl;
+package tears.service.impl.email.impl;
 
-import tears.email.ClientEmail;
+import tears.service.EmailService;
 
 /**
  * @author Viktor Bilko on 21.08.2017.
  */
-public class ClientEmailImpl implements ClientEmail {
+public class EmailServiceImpl implements EmailService {
 
     /**
      * {@inheritDoc}.

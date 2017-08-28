@@ -2,8 +2,8 @@ package tears.service.impl;
 
 import tears.dao.ClientDao;
 import tears.dao.impl.ClientDaoImpl;
-import tears.email.ClientEmail;
-import tears.email.impl.ClientEmailImpl;
+import tears.service.EmailService;
+import tears.service.impl.email.impl.EmailServiceImpl;
 import tears.model.Client;
 import tears.service.ClientService;
 
@@ -13,7 +13,7 @@ import tears.service.ClientService;
 public class ClientServiceImpl implements ClientService {
 
     private ClientDao clientDao = new ClientDaoImpl();
-    private ClientEmail clientEmail = new ClientEmailImpl();
+    private EmailService clientEmail = new EmailServiceImpl();
 
     /**
      * {@inheritDoc}.

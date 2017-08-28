@@ -1,9 +1,9 @@
-package tears.email;
+package tears.service;
 
 /**
  * @author Viktor Bilko on 21.08.2017.
  */
-public interface ClientEmail {
+public interface EmailService {
 
 
     /**
