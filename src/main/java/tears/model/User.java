@@ -1,9 +1,9 @@
 package tears.model;
 
 /**
- * @author Igor Hnes on 8/17/17.
+ * @author Alex on 8/17/17.
  */
-public class User {
+public class User extends AbstractEntity{
 
     private String name;
     private String surname;

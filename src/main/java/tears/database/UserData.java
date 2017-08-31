@@ -2,28 +2,41 @@ package tears.database;
 
 import tears.model.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Igor Hnes on 8/17/17.
  */
 public class UserData {
 
-    public static User[] getUsers() {
+    public static List<User> getUsers() {
+
         final User user = new User();
         user.setName("Alex");
-
-        User[] users = new User[1];
-        users[0] = user;
-
-        return users;
-    }
-
-    public static User getPassword() {
-        final User user= new User();
+        user.setSurname("Smit");
+        user.setEmail("joyukr@ukr.net");
+        user.setAge(22);
+        final User user1 = new User();
         user.setName("Bob");
-        user.setPassword("1111");
-        user.setEmail("bob@gmail.com");
+        user.setSurname("Valis");
+        user.setEmail("alex@ukr.net");
+        user.setAge(22);
+        final User user2 = new User();
+        user.setName("Ivan");
+        user.setSurname("Rozov");
+        user.setEmail("google@ukr.net");
+        user.setAge(22);
+        final User user3 = new User();
+        user.setName("Sasha");
+        user.setSurname("Tores");
+        user.setEmail("kirsten@ukr.net");
+        user.setAge(22);
 
 
-        return user;
+
+        List<User> usersList = new ArrayList<>();
+        usersList.add(user);
+        return usersList;
     }
 }

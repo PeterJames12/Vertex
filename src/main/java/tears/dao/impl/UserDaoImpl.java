@@ -4,10 +4,28 @@ import tears.dao.UserDao;
 import tears.database.UserData;
 import tears.model.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Igor Hnes on 8/17/17.
  */
 public class UserDaoImpl implements UserDao {
+
+    /**
+     * {@inheritDoc}.
+     */
+    @Override
+    public User getUserByEmail(String email) {
+        final List<User> users = UserData.getUsers();
+
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return user;
+            }
+        }
+        return null;
+    }
 
     /**
      * {@inheritDoc}.
@@ -21,13 +39,8 @@ public class UserDaoImpl implements UserDao {
      * {@inheritDoc}.
      */
     @Override
-    public User[] getUsers() {
+    public List<User> getUsers() {
         return UserData.getUsers();
-    }
-
-    @Override
-    public User changePassword() {
-        return UserData.getPassword();
     }
 
     /**
@@ -35,8 +48,18 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public User getById(Long id) {
-        final User user = new User();
-        user.setName("Alex");
-        return user;
+        final List<User> users = new ArrayList<>();
+
+        for (User user : users) {
+            if (user.equals(id)) {
+                System.out.println(user);
+            }else System.out.println("ERROR");
+        }
+        return null;
+    }
+
+    @Override
+    public User update(User user) {
+        return null;
     }
 }

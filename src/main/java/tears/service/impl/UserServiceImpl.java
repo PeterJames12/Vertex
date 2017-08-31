@@ -1,8 +1,12 @@
 package tears.service.impl;
 
 import tears.dao.UserDao;
+import tears.dao.factory.DaoFactory;
 import tears.model.User;
+import tears.service.EmailService;
 import tears.service.UserService;
+
+import java.util.List;
 
 /**
  * Implementation
@@ -12,7 +16,8 @@ import tears.service.UserService;
 public class UserServiceImpl implements UserService {
 
     private UserDao userDao;
-    private EmailServiceImpl emailServiceImpl;
+    private EmailService emailService;
+
 
     /**
      * {@inheritDoc}.
@@ -22,13 +27,22 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    @Override
+    public User getUserByEmail(String email) {
+        final UserDao userDao = DaoFactory.getUserDao();
+        return userDao.getUserByEmail(email);
+    }
+
     /**
      * {@inheritDoc}.
      */
     @Override
-    public User[] getUsers() {
-        return null;
+    public List<User> getUsers() {
+        return DaoFactory.getUserDao().getUsers();
     }
+
+
+
 
     @Override
     public User getById(Long id) {
@@ -39,8 +53,11 @@ public class UserServiceImpl implements UserService {
      * {@inheritDoc}.
      */
     @Override
-    public void changePassword(String message, String email) {
-        emailServiceImpl = new EmailServiceImpl();
-        emailServiceImpl.sendMessage(message, email);
+    public void changePassword(User user) {
+        User userByEmail = userDao.getUserByEmail(user.getEmail());
+        userByEmail.setPassword("12345");
+        userDao.update(user);
+        emailService.send(user);
+
     }
 }

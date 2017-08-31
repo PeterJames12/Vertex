@@ -2,6 +2,8 @@ package tears.service;
 
 import tears.model.User;
 
+import java.util.List;
+
 /**
  * @author Igor Hnes on 8/17/17.
  */
@@ -12,9 +14,14 @@ public interface UserService {
     User getUser();
 
     /**
+     * @return user.
+     */
+    User getUserByEmail(String email);
+
+    /**
      * @return list of users.
      */
-    User[] getUsers();
+    List<User> getUsers();
 
     /**
      * @param id is user's id.
@@ -25,5 +32,5 @@ public interface UserService {
     /**
      * Change password.
      */
-    void changePassword(String message, String email);
+    void changePassword(User user);
 }
