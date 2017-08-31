@@ -1,8 +1,8 @@
-model - (Project, Instructor)
-database - ProjectData
-dao - ProjectDao
-    impl - ProjectDaoImpl
-service - ProjectService
-    impl - ProjectServiceImpl
-    email - EmailService
-controller - ProjectController
+String name = “Alex” порівняти з вашим ім’ям,
+ після чого присвоїти name null, відловити exception
+
+
+Перевести строку “smth” в Integer, відловити exception.
+
+
+

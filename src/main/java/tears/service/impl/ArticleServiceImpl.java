@@ -11,7 +11,7 @@ import tears.service.ArticleService;
  */
 public class ArticleServiceImpl implements ArticleService {
 
-    private ArticleDao articleDao;
+    private ArticleDao articleDao; // todo Factory
 
     /**
      * {@inheritDoc}.

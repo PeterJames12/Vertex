@@ -1,26 +1,25 @@
 package tears.service.impl;
 
 import tears.dao.UserDao;
+import tears.dao.factory.DaoFactory;
 import tears.model.User;
 import tears.service.EmailService;
 import tears.service.UserService;
 import tears.service.impl.email.EmailServiceImpl;
 
+import java.util.List;
+
 /**
- * Implementation
- *
  * @author Igor Hnes on 8/17/17.
  */
 public class UserServiceImpl implements UserService {
-
-    private UserDao userDao;
-    private EmailService emailService;
 
     /**
      * {@inheritDoc}.
      */
     @Override
     public User getUserByEmail(String email) {
+        final UserDao userDao = DaoFactory.getUserDao();
         return userDao.getUserByEmail(email);
     }
 
@@ -28,16 +27,17 @@ public class UserServiceImpl implements UserService {
      * {@inheritDoc}.
      */
     @Override
-    public User[] getUsers() {
+    public List<User> getUsers() {
+        final UserDao userDao = DaoFactory.getUserDao();
         return userDao.getUsers();
     }
-
 
     /**
      * {@inheritDoc}.
      */
     @Override
     public User getById(Long id) {
+        final UserDao userDao = DaoFactory.getUserDao();
         return userDao.getUserById(id);
     }
 
@@ -46,10 +46,6 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public void changePassword(User user) {
-        User userByEmail = userDao.getUserByEmail(user.getEmail());
-        userByEmail.setPassword("12345");
-        userDao.update(user);
-        emailService.send(user);
 
     }
 }

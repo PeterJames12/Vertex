@@ -13,15 +13,23 @@ import java.util.List;
  */
 public class UserDaoImpl implements UserDao {
 
+    public static void main(String[] args) {
+
+        final UserDaoImpl userDao = new UserDaoImpl();
+        final User userByEmail = userDao.getUserByEmail("");
+        System.out.println(userByEmail.getAge());
+    }
+
     /**
      * {@inheritDoc}.
      */
     @Override
-    public User getUserByEmail(String email) {
+    public User getUserByEmail(String name) {
         final List<User> users = UserData.getUsers();
 
         for (User user : users) {
-            if (user.getEmail().equals(email)) {
+            System.out.println(user.getAge());
+            if (user.getName().equals(name)) {
                 return user;
             }
         }
@@ -32,8 +40,9 @@ public class UserDaoImpl implements UserDao {
      * {@inheritDoc}.
      */
     @Override
-    public User[] getUsers() {
-        return null;
+    public List<User> getUsers() {
+        //"select * from users"
+        return UserData.getUsers();
     }
 
     /**

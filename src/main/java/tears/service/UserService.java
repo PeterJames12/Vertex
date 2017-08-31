@@ -2,6 +2,8 @@ package tears.service;
 
 import tears.model.User;
 
+import java.util.List;
+
 /**
  * @author Igor Hnes on 8/17/17.
  */
@@ -15,7 +17,7 @@ public interface UserService {
     /**
      * @return list of users.
      */
-    User[] getUsers();
+    List<User> getUsers();
 
     /**
      * @param id is user's id.

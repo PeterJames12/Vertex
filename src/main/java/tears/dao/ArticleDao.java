@@ -7,6 +7,8 @@ import tears.model.Article;
  */
 public interface ArticleDao {
 
+    String ngerhr = null;
+
     /**
      * @return {@link Article}.
      */

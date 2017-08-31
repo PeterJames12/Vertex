@@ -3,7 +3,7 @@ package tears.model;
 /**
  * @author Igor Hnes on 8/17/17.
  */
-public class Article {
+public class Article extends AbstractEntity{
 
     private String title;
     private String description;

@@ -1,18 +1,24 @@
 package tears.controller;
 
-import tears.service.ArticleService;
-import tears.service.impl.ArticleServiceImpl;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 /**
- * Article controller.
- *
  * @author Igor Hnes on 8/17/17.
  */
 public class ArticleController {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        ArticleService articleService = new ArticleServiceImpl();
-        articleService.getArticles();
+
+
+
+
+        URL url = new URL("https://github.com/PeterJames12/Vertex2");
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+        System.out.println(connection.getResponseCode());
+        
     }
 }
