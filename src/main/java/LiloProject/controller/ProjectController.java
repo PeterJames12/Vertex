@@ -1,17 +1,21 @@
 package LiloProject.controller;
 
+import LiloProject.model.Instructor;
 import LiloProject.service.InstructorService;
-import LiloProject.service.impl.InstructorServiceImpl;
 
 /**
  * Created by qw-user on 27.08.2017.
  */
 public class ProjectController {
 
-    public static void main(String[] args) {
-
-        InstructorService instructorService = new InstructorServiceImpl();
-        instructorService.setCall("Alex");
-
-    }
+//    private static InstructorService instructorService;
+//
+//    public static void main(String[] args) {
+//            final Instructor instructor = new Instructor();
+//            instructor.setName("Alex");
+//            instructor.setSurname("Smit");
+//            instructor.setEmail("alex@gmail.com");
+//            instructorService.changePassword(instructor);
+//
+//    }
 }

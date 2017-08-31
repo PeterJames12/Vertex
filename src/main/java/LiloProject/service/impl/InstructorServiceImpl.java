@@ -1,7 +1,6 @@
 package LiloProject.service.impl;
 
 import LiloProject.dao.InstructorDao;
-import LiloProject.database.InstructorData;
 import LiloProject.email.EmailService;
 import LiloProject.model.Instructor;
 import LiloProject.service.InstructorService;
@@ -16,10 +15,25 @@ public class InstructorServiceImpl implements InstructorService {
     EmailService emailService;
     PhoneService phoneService;
 
+    @Override
+    public void setCall(Instructor instructor){
+        Instructor instructorByPhone = instructorDao.getPhoneNumberByInstructor(instructor.getPhoneNumber());
+        instructorByPhone.setPhoneNumber("0992447589");
+        instructorDao.update(instructor);
+        phoneService.makecall(instructor);
+
+
+
+    }
 
     @Override
-    public Instructor getInstructor() {
-        return null;
+    public Instructor getInstructorByEmail(String email) {
+        return instructorDao.getInstructorByEmail(email);
+    }
+
+    @Override
+    public Instructor getPhoneNumberByInstructor(String phoneNumber) {
+        return instructorDao.getPhoneNumberByInstructor(phoneNumber);
     }
 
     @Override
@@ -28,25 +42,15 @@ public class InstructorServiceImpl implements InstructorService {
     }
 
     @Override
-    public Instructor getPhoneNumberByName(String phoneNumber) {
-        return instructorDao.getPhoneNumberByName(phoneNumber);
+    public Instructor getByid(Long id) {
+        return null;
     }
 
     @Override
-    public void welcomeMessage(Instructor instructor) {
-        Instructor instructorNumberByName = instructorDao.getPhoneNumberByName(instructor.getPhoneNumber());
-        instructorNumberByName.setPhoneNumber("0934698900");
+    public void changePassword(Instructor instructor) {
+        Instructor instructorByEmail = instructorDao.getInstructorByEmail(instructor.getEmail());
+        instructorByEmail.setPassword("234r56");
         instructorDao.update(instructor);
         emailService.send(instructor);
-
     }
-
-    @Override
-    public void setCall(String name) {
-
-        Instructor instructor = new Instructor();
-        instructor.getPhoneNumber().equals(name);
-        phoneService.makecall("Alex");
-    }
-
 }

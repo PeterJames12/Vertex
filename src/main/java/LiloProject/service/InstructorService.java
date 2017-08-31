@@ -11,7 +11,12 @@ public interface InstructorService {
     /**
      * @return Instructor
      */
-    Instructor getInstructor();
+    Instructor getInstructorByEmail(String email);
+
+    /**
+     * @return Instructor
+     */
+    Instructor getPhoneNumberByInstructor(String phoneNumber);
 
     /**
      * @return list of Instructors
@@ -19,12 +24,16 @@ public interface InstructorService {
     Instructor[] getInstructors();
 
     /**
-     * @return phoneNumber
+     * @param id is instructor's id.
+     * @return {@link Instructor} entity by given id.
      */
-    Instructor getPhoneNumberByName(String phoneNumber);
+    Instructor getByid(Long id);
 
-    void welcomeMessage(Instructor instructor);
+    void setCall(Instructor instructor);
 
-    void setCall(String name);
+    /**
+     * Change password.
+     */
+    void changePassword(Instructor instructor);
 
 }

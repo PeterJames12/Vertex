@@ -11,17 +11,31 @@ import java.util.List;
 public class InstructorData {
 
 
-        public static List<Instructor> getInstructors() {
+    public static Instructor[] getInstructors() {
+        final Instructor instructor = new Instructor();
+        instructor.setName("Alex");
+        instructor.setSurname("Smit");
+        instructor.setPhoneNumber("0934698900");
+        instructor.setEmail("alex@gmail.com");
 
-            final Instructor instructor = new Instructor();
-            instructor.setName("Alex");
-            instructor.setSurname("Smit");
-            instructor.setPhoneNumber("0934698900");
-            instructor.setEmail("lovely_story@ukr.com");
+        Instructor[] instructors = new Instructor[1];
+        instructors[0] = instructor;
 
-            List<Instructor> instructorList = new ArrayList<>();
-            instructorList.add(instructor);
+        return  instructors;
+    }
 
-            return instructorList;
-        }
+
+//        public static List<Instructor> getInstructors() {
+//
+//            final Instructor instructor = new Instructor();
+//            instructor.setName("Alex");
+//            instructor.setSurname("Smit");
+//            instructor.setPhoneNumber("0934698900");
+//            instructor.setEmail("alex@gmail.com");
+//
+//            List<Instructor> instructorList = new ArrayList<>();
+//            instructorList.add(instructor);
+//
+//            return instructorList;
+//        }
 }

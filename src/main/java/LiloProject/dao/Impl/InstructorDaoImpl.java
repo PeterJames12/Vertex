@@ -11,21 +11,52 @@ import java.util.List;
  */
 public class InstructorDaoImpl implements InstructorDao {
 
+
+    Instructor instructor;
+
+    /**
+     * {@inheritDoc}.
+     */
     @Override
-    public Instructor getInstructor() {
+    public Instructor getInstructorByEmail(String email) {
+        final Instructor[] instructors = InstructorData.getInstructors();
+        for (Instructor instructor : instructors) {
+            if (instructor.getEmail().equals(email)) {
+                return instructor;
+            }
+        }
         return null;
     }
 
+    /**
+     * {@inheritDoc}.
+     */
     @Override
     public Instructor[] getInstructors() {
+        return InstructorData.getInstructors();
+    }
+
+    /**
+     * {@inheritDoc}.
+     */
+    @Override
+    public Instructor getById(Long id) {
         return null;
     }
 
+    /**
+     * {@inheritDoc}.
+     */
     @Override
-    public Instructor getPhoneNumberByName(String phoneNumber) {
+    public Instructor update(Instructor instructor) {
+        return null;
+    }
 
-        final List<Instructor> instructors = InstructorData.getInstructors();
 
+    @Override
+    public Instructor getPhoneNumberByInstructor(String phoneNumber) {
+
+        final Instructor[] instructors = InstructorData.getInstructors();
         for (Instructor instructor : instructors) {
             if (instructor.getPhoneNumber().equals(phoneNumber)) {
                 return instructor;
@@ -34,10 +65,15 @@ public class InstructorDaoImpl implements InstructorDao {
         }
         return null;
     }
-
-    @Override
-    public Instructor update(Instructor instructor) {
-        return null;
-    }
-
 }
+
+
+//        final List<Instructor> instructors = InstructorData.getInstructors();
+//
+//        for (Instructor instructor : instructors) {
+//            if (instructor.getPhoneNumber().equals(phoneNumber)) {
+//                return instructor;
+//            }
+//
+//        }
+//        return null;

@@ -7,11 +7,11 @@ import LiloProject.model.Instructor;
  */
 public interface InstructorDao {
 
-    /**
-     * @return Instructor
-     */
-    Instructor getInstructor();
 
+    /**
+     * @return user.
+     */
+    Instructor getInstructorByEmail(String email);
     /**
      * @return list of Instructors
      */
@@ -20,7 +20,13 @@ public interface InstructorDao {
     /**
      * @return Phonenumber
      */
-    Instructor getPhoneNumberByName(String phoneNumber);
+    Instructor getPhoneNumberByInstructor(String phoneNumber);
+
+    /**
+     * @param id is user's id.
+     * @return {@link Instructor} entity by given id.
+     */
+    Instructor getById(Long id);
 
     Instructor update(Instructor instructor);
 
