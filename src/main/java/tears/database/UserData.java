@@ -5,9 +5,10 @@ import tears.model.User;
 /**
  * @author Igor Hnes on 8/17/17.
  */
-public class UserData {
-
-    public static User[] getUsers() {
+public class UserData
+{
+    public static User[] getUsers()
+    {
         final User user = new User();
         user.setName("Alex");
 

@@ -3,13 +3,13 @@ package tears.model;
 /**
  * @author Igor Hnes on 8/17/17.
  */
-public class User {
+public class User extends AbstractEntity {
 
     private String name;
     private String surname;
     private int age;
 
-    public String getName() {
+    public String getName(String bob) {
         return name;
     }
 
@@ -25,7 +25,7 @@ public class User {
         this.surname = surname;
     }
 
-    public int getAge() {
+    public int getAge(int i) {
         return age;
     }
 
