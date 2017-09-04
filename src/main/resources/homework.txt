@@ -1,8 +1,48 @@
-String name = “Alex” порівняти з вашим ім’ям,
- після чого присвоїти name null, відловити exception
+Написати 6 методів (3 для запису у файл, 3 щоб прочитати)
+
+Написати програму яка пише Hello у файл, обробити exception if file does't exist
+
+Написати свою реалізацію StringJoiner (add clear isEmpty contains)
+
+  Записати у файл 3 юзера використовувати
+  інтерфейси (UserPrinter List<User>, UserWriter List<User>)
+example:
+
+User number 1
+username: Igor
+age: 22
+hobby: running
+
+User number 2
+username: Bob
+age: 23
+hobby: football
+
+User number 3
+username: Bob
+age: 23
+hobby: football
+
+Написати програму спершу чатає текст з файлу, заміняє всі слова stop на drink beer (interface)
+
+Використовуючи StreamTokenizer порухувати к-ть слів у файлі
+
+Написати програму яка перезаписує файл без дублікатів слів
+
+Написати програму яка записує у файл введений текст через сканер (interface Reader Writer)
+
+Написати програму яка запитує про Юзера та про Проект і записує дані у файл (interface)
+    1. Write User
+    2. Write Project
+
+Написати програму яка считує з файлу текст взалежності від команди (interface ?)
+    1. Print users
+    2. Print projects
+
+Написати програму яка зчитує дані з двух файлів user and project та пише у архів файл
 
 
-Перевести строку “smth” в Integer, відловити exception.
+
 
 
 
