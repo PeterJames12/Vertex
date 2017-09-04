@@ -1,11 +1,13 @@
 package tears.service.impl;
 
+import org.omg.CosNaming.NamingContextExtPackage.InvalidAddress;
 import tears.dao.UserDao;
 import tears.dao.factory.DaoFactory;
 import tears.model.User;
 import tears.service.EmailService;
 import tears.service.UserService;
 
+import javax.naming.NameNotFoundException;
 import java.util.List;
 
 /**
@@ -29,6 +31,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserByEmail(String email) {
+        try {
+            if (email.equals("")) {
+                throw new InvalidAddress();
+            }
+        } catch (InvalidAddress invalidAddress) {
+            invalidAddress.printStackTrace();
+        }
         final UserDao userDao = DaoFactory.getUserDao();
         return userDao.getUserByEmail(email);
     }
@@ -54,6 +63,13 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public void changePassword(User user) {
+        try {
+            if (user == null) {
+                throw new NameNotFoundException();
+            }
+        } catch (NameNotFoundException e) {
+            System.out.println("User doesn't exist" + " " + e);
+        }
         User userByEmail = userDao.getUserByEmail(user.getEmail());
         userByEmail.setPassword("12345");
         userDao.update(user);

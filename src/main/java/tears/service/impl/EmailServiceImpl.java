@@ -28,6 +28,13 @@ public class EmailServiceImpl implements EmailService {
     }
 
     public void sendMessage(String message, String email) {
+        try {
+            if (message.isEmpty()) {
+                throw new RuntimeException();
+            }
+        } catch (RuntimeException e) {
+            System.out.println("Message without text" + " " + e);
+        }
         System.out.println(message);
         System.out.println(email);
         // Email API
