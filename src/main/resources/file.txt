@@ -1,0 +1,3 @@
+@java.lang.Deprecated()
+@practice_reflect.Sober()
+@practice_reflect.Drunk()

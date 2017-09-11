@@ -2,18 +2,26 @@ package tears.database;
 
 import tears.model.User;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * @author Igor Hnes on 8/17/17.
  */
 public class UserData {
 
-    public static User[] getUsers() {
-        final User user = new User();
-        user.setName("Alex");
+    static List <User> users = new LinkedList<>();
 
-        User[] users = new User[1];
-        users[0] = user;
-
+    public static List<User> getUsers() {
         return users;
+    }
+
+    public static void addUser(User user){
+        users.add(user);
+    }
+
+    public static void removeUser(User user){
+        users.remove(user);
     }
 }
