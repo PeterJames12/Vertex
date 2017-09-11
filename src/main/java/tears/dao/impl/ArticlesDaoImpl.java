@@ -30,7 +30,7 @@ public class ArticlesDaoImpl implements ArticlesDao{
     @Override
     public Articles getById(Long id) {
         final Articles articles = new Articles();
-        articles.getTitle("Java");
+        articles.getTitle();
         return articles;
     }
 }

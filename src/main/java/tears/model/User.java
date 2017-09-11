@@ -1,54 +1,17 @@
 package tears.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * @author Alex on 8/17/17.
  */
 public class User extends AbstractEntity{
 
-    private String name;
-    private String surname;
-    private int age;
-    private String email;
-    private String password;
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        email = email;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
+    @Getter @Setter private String name;
+    @Getter @Setter private String surname;
+    @Getter @Setter private int age;
+    @Getter @Setter private String email;
+    @Getter @Setter private String password;
 
 }

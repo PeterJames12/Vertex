@@ -1,5 +1,6 @@
 package tears.service.impl;
 
+import lombok.val;
 import org.omg.CosNaming.NamingContextExtPackage.InvalidAddress;
 import tears.dao.UserDao;
 import tears.dao.factory.DaoFactory;
@@ -13,7 +14,7 @@ import java.util.List;
 /**
  * Implementation
  *
- * @author Igor Hnes on 8/17/17.
+ * @author Alexey.
  */
 public class UserServiceImpl implements UserService {
 
@@ -38,7 +39,7 @@ public class UserServiceImpl implements UserService {
         } catch (InvalidAddress invalidAddress) {
             invalidAddress.printStackTrace();
         }
-        final UserDao userDao = DaoFactory.getUserDao();
+        val userDao = DaoFactory.getUserDao();
         return userDao.getUserByEmail(email);
     }
 

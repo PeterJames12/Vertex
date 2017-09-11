@@ -1,5 +1,6 @@
 package tears.dao.impl;
 
+import lombok.val;
 import tears.dao.UserDao;
 import tears.database.UserData;
 import tears.model.User;
@@ -17,7 +18,7 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public User getUserByEmail(String email) {
-        final List<User> users = UserData.getUsers();
+        val users = UserData.getUsers();
 
         for (User user : users) {
             if (user.getEmail().equals(email)) {
@@ -48,7 +49,7 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public User getById(Long id) {
-        final List<User> users = new ArrayList<>();
+        List<User> users = new ArrayList<>();
 
         for (User user : users) {
             if (user.equals(id)) {
