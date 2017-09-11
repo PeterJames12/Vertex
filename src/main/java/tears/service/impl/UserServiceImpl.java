@@ -1,5 +1,6 @@
 package tears.service.impl;
 
+import lombok.val;
 import tears.dao.UserDao;
 import tears.dao.factory.DaoFactory;
 import tears.model.User;
@@ -19,7 +20,9 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public User getUserByEmail(String email) {
-        final UserDao userDao = DaoFactory.getUserDao();
+
+        val userDao = DaoFactory.getUserDao();
+
         return userDao.getUserByEmail(email);
     }
 

@@ -27,6 +27,5 @@ public class BeerService {
         filePrinterBeer.print(replacedBeer);
 
         printerBeer.print(replacedBeer);
-
     }
 }
