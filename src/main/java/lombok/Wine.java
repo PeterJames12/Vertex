@@ -1,6 +1,5 @@
 package lombok;
 
-import annotation.Todo;
 import lombok.experimental.Accessors;
 
 import java.util.HashMap;
@@ -11,6 +10,7 @@ import java.util.Map;
  */
 @RequiredArgsConstructor(staticName = "of")
 @Accessors(fluent = true)
+@Deprecated
 public class Wine {
 
     @Getter
